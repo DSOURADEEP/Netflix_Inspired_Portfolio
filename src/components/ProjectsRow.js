@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDatabase, FaPython, FaGithub, FaExternalLinkAlt, FaPlay, FaTimes, FaBitcoin, FaUniversity, FaMicroscope, FaLanguage, FaChartBar } from 'react-icons/fa';
-import { SiSpringboot, SiTensorflow, SiJavascript } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDatabase, FaPython, FaGithub, FaExternalLinkAlt, FaPlay, FaTimes, FaBitcoin, FaUniversity, FaRobot, FaMicrophone, FaChartBar } from 'react-icons/fa';
+import { SiSpringboot, SiTensorflow, SiJavascript, SiStreamlit, SiPytorch } from 'react-icons/si';
 
-import pdfTranslator1 from '../images/pdf-translator-1.png';
-import pdfTranslator2 from '../images/pdf-translator-2.png';
 import kpiDashboard1 from '../images/kpi-dashboard-1.png';
 import kpiDashboard2 from '../images/kpi-dashboard-2.png';
 import cryptoTracker1 from '../images/Screenshot 2025-08-06 022229.png';
 import cryptoTracker2 from '../images/Screenshot 2025-08-06 022251.png';
 import cryptoTracker3 from '../images/Screenshot 2025-08-06 022303.png';
+import ragChatbot1 from '../images/RAG-chatbot-1.png';
+import aiAssistant1 from '../images/AI-assistant-1.png';
+import aiAssistant2 from '../images/AI-assistant-2.png';
 
 const projectData = [
   {
@@ -37,24 +38,26 @@ const projectData = [
   },
   {
     id: 3,
-    title: 'Skin Cancer Detection System',
-    subtitle: 'Deep Learning | Final Year Project',
-    description: 'Built a CNN-based model using ResNet50, DenseNet121, and AlexNet to detect skin cancer from skin images. Integrated Grad-CAM for interpretability and deployed the system via a Flask web app with real-time prediction.',
-    techStack: ['Python', 'CNN', 'Flask', 'Grad-CAM'],
-    icons: [<FaPython />, <SiTensorflow />],
-    bgColor: '#FFD43B',
-    icon: <FaMicroscope />
+    title: 'RAG Document ChatBot',
+    subtitle: 'Retrieval-Augmented Generation (RAG)',
+    description: 'A fully free Retrieval-Augmented Generation (RAG) chatbot application built with Streamlit and Hugging Face models. Upload documents (PDF, TXT, images) and chat with their contents using AI, completely free and running locally for embeddings.',
+    techStack: ['Python', 'Streamlit', 'OCR', 'Data Processing', 'Natural Language Processing (NLP)', 'LangChain'],
+    icons: [<FaPython />, <SiStreamlit />, <FaRobot />],
+    bgColor: '#FF6B6B',
+    deployedLink: 'https://rag--document--chatbot-rmryt6xwrpqp4frugamxvs.streamlit.app/',
+    images: [ragChatbot1],
+    icon: <FaRobot />
   },
   {
     id: 4,
-    title: 'Multilingual PDF Translation Chatbot',
-    subtitle: 'Automated PDF Translator',
-    description: 'Developed an automated PDF translator using googletrans to convert PDFs into multiple languages. Built with Flask and JavaScript during my Accenture internship, this self-initiated project demonstrated my ability to automate workflows beyond core responsibilities.',
-    techStack: ['Python', 'Flask', 'JavaScript', 'Vercel'],
-    icons: [<FaPython />, <SiJavascript />],
-    bgColor: '#3272EB',
-    images: [pdfTranslator1, pdfTranslator2],
-    icon: <FaLanguage />
+    title: 'Custom AI Desktop Assistant for Windows',
+    subtitle: 'AI-powered personal assistant',
+    description: 'Developed a fully functional AI-powered personal assistant for Windows that integrates voice commands, automation, and AI intelligence. The assistant can open applications, search the web, control system functions, and provide real-time AI-generated responses using the OpenAI API.',
+    techStack: ['Python', 'Speech Recognition', 'Pyttsx3', 'Automation', 'Tkinter'],
+    icons: [<FaPython />, <FaMicrophone />],
+    bgColor: '#9C27B0',
+    images: [aiAssistant1, aiAssistant2],
+    icon: <FaMicrophone />
   },
   {
     id: 5,
